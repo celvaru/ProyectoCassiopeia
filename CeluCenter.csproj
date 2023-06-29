@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC1C297B-EC6D-4A09-9B74-837C00B2E403}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CeluCenter</RootNamespace>
+    <AssemblyName>CeluCenter</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CeluCenterDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CeluCenterDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CeluCenterDataSetVentas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CeluCenterDataSetVentas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CeluCenterInventario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CeluCenterInventario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CeluCenterUsuarios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CeluCenterUsuarios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CeluInventario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CeluInventario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Context\CompraVenta.cs" />
+    <Compile Include="Controladores\UsuarioController.cs" />
+    <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\Compra.cs" />
+    <Compile Include="Models\Detalle_Venta.cs" />
+    <Compile Include="Models\Producto.cs" />
+    <Compile Include="Models\Propietario.cs" />
+    <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Models\Vendedor.cs" />
+    <Compile Include="Models\Venta.cs" />
+    <Compile Include="Vistas\GestionarUsuario_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\GestionarUsuario_form.Designer.cs">
+      <DependentUpon>GestionarUsuario_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\HistorialCompras_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\HistorialCompras_form.Designer.cs">
+      <DependentUpon>HistorialCompras_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\HistorialVentas_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\HistorialVentas_form.Designer.cs">
+      <DependentUpon>HistorialVentas_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Inventario_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Inventario_form.Designer.cs">
+      <DependentUpon>Inventario_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Login_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Login_form.Designer.cs">
+      <DependentUpon>Login_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\MenuPrincipal_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\MenuPrincipal_form.Designer.cs">
+      <DependentUpon>MenuPrincipal_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Vistas\GestionarUsuario_form.resx">
+      <DependentUpon>GestionarUsuario_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\HistorialCompras_form.resx">
+      <DependentUpon>HistorialCompras_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\HistorialVentas_form.resx">
+      <DependentUpon>HistorialVentas_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Inventario_form.resx">
+      <DependentUpon>Inventario_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Login_form.resx">
+      <DependentUpon>Login_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\MenuPrincipal_form.resx">
+      <DependentUpon>MenuPrincipal_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="CeluCenterDataSet.xsc">
+      <DependentUpon>CeluCenterDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CeluCenterDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CeluCenterDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CeluCenterDataSet.xss">
+      <DependentUpon>CeluCenterDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CeluCenterDataSetVentas.xsc">
+      <DependentUpon>CeluCenterDataSetVentas.xsd</DependentUpon>
+    </None>
+    <None Include="CeluCenterDataSetVentas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CeluCenterDataSetVentas.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CeluCenterDataSetVentas.xss">
+      <DependentUpon>CeluCenterDataSetVentas.xsd</DependentUpon>
+    </None>
+    <None Include="CeluCenterInventario.xsc">
+      <DependentUpon>CeluCenterInventario.xsd</DependentUpon>
+    </None>
+    <None Include="CeluCenterInventario.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CeluCenterInventario.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CeluCenterInventario.xss">
+      <DependentUpon>CeluCenterInventario.xsd</DependentUpon>
+    </None>
+    <None Include="CeluCenterUsuarios.xsc">
+      <DependentUpon>CeluCenterUsuarios.xsd</DependentUpon>
+    </None>
+    <None Include="CeluCenterUsuarios.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CeluCenterUsuarios.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CeluCenterUsuarios.xss">
+      <DependentUpon>CeluCenterUsuarios.xsd</DependentUpon>
+    </None>
+    <None Include="CeluInventario.xsc">
+      <DependentUpon>CeluInventario.xsd</DependentUpon>
+    </None>
+    <None Include="CeluInventario.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CeluInventario.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CeluInventario.xss">
+      <DependentUpon>CeluInventario.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\flecha-izquierda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\atras.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
