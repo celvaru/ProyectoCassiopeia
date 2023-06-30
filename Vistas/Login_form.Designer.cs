@@ -30,18 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_form));
             this.ingresar_btn = new System.Windows.Forms.Button();
-            this.perfil = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.usuario_txt = new System.Windows.Forms.TextBox();
             this.password_txt = new System.Windows.Forms.TextBox();
+            this.perfil = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.perfil)).BeginInit();
             this.SuspendLayout();
             // 
             // ingresar_btn
             // 
             this.ingresar_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ingresar_btn.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
+            this.ingresar_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ingresar_btn.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ingresar_btn.Location = new System.Drawing.Point(128, 447);
             this.ingresar_btn.Name = "ingresar_btn";
@@ -50,16 +52,6 @@
             this.ingresar_btn.Text = "INGRESAR";
             this.ingresar_btn.UseVisualStyleBackColor = true;
             this.ingresar_btn.Click += new System.EventHandler(this.ingresar_btn_Click);
-            // 
-            // perfil
-            // 
-            this.perfil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("perfil.BackgroundImage")));
-            this.perfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.perfil.Location = new System.Drawing.Point(97, 86);
-            this.perfil.Name = "perfil";
-            this.perfil.Size = new System.Drawing.Size(200, 200);
-            this.perfil.TabIndex = 1;
-            this.perfil.TabStop = false;
             // 
             // label1
             // 
@@ -108,6 +100,16 @@
             this.password_txt.Size = new System.Drawing.Size(184, 30);
             this.password_txt.TabIndex = 6;
             // 
+            // perfil
+            // 
+            this.perfil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("perfil.BackgroundImage")));
+            this.perfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.perfil.Location = new System.Drawing.Point(97, 86);
+            this.perfil.Name = "perfil";
+            this.perfil.Size = new System.Drawing.Size(200, 200);
+            this.perfil.TabIndex = 1;
+            this.perfil.TabStop = false;
+            // 
             // Login_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -120,9 +122,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.perfil);
             this.Controls.Add(this.ingresar_btn);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login";
+            this.Text = "CELUCENTER - Log In";
             this.Load += new System.EventHandler(this.Login_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.perfil)).EndInit();
             this.ResumeLayout(false);

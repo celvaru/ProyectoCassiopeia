@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventario_form));
             this.hventas_btn = new System.Windows.Forms.Button();
             this.inventario_btn = new System.Windows.Forms.Button();
@@ -54,10 +54,6 @@
             this.ramDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productoesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.celuInventario = new CeluCenter.CeluInventario();
-            this.eliminar_btn = new System.Windows.Forms.Button();
-            this.limpiar_btn = new System.Windows.Forms.Button();
-            this.modificar_btn = new System.Windows.Forms.Button();
-            this.nuevo_btn = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -85,13 +81,17 @@
             this.buscar_btn = new System.Windows.Forms.Button();
             this.buscar_txt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.menu_btn = new System.Windows.Forms.Button();
-            this.cerrarsesion_btn = new System.Windows.Forms.Button();
             this.hcompras_btn = new System.Windows.Forms.Button();
             this.celuCenterInventario = new CeluCenter.CeluCenterInventario();
             this.celuCenterInventarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.celuCenterInventarioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.productoesTableAdapter = new CeluCenter.CeluInventarioTableAdapters.ProductoesTableAdapter();
+            this.eliminar_btn = new System.Windows.Forms.Button();
+            this.limpiar_btn = new System.Windows.Forms.Button();
+            this.modificar_btn = new System.Windows.Forms.Button();
+            this.nuevo_btn = new System.Windows.Forms.Button();
+            this.menu_btn = new System.Windows.Forms.Button();
+            this.cerrarsesion_btn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inventario_tabla)).BeginInit();
@@ -224,14 +224,14 @@
             this.inventario_tabla.AutoGenerateColumns = false;
             this.inventario_tabla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.inventario_tabla.BackgroundColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.PaleGoldenrod;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.inventario_tabla.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.PaleGoldenrod;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.inventario_tabla.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.inventario_tabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.inventario_tabla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigoDataGridViewTextBoxColumn,
@@ -248,25 +248,25 @@
             this.precioVentaDataGridViewTextBoxColumn,
             this.ramDataGridViewTextBoxColumn});
             this.inventario_tabla.DataSource = this.productoesBindingSource;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.PaleGoldenrod;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.inventario_tabla.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.PaleGoldenrod;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.inventario_tabla.DefaultCellStyle = dataGridViewCellStyle2;
             this.inventario_tabla.Location = new System.Drawing.Point(20, 300);
             this.inventario_tabla.Name = "inventario_tabla";
             this.inventario_tabla.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.PaleGoldenrod;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.inventario_tabla.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.PaleGoldenrod;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.inventario_tabla.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.inventario_tabla.Size = new System.Drawing.Size(835, 195);
             this.inventario_tabla.TabIndex = 37;
             // 
@@ -383,58 +383,6 @@
             // 
             this.celuInventario.DataSetName = "CeluInventario";
             this.celuInventario.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // eliminar_btn
-            // 
-            this.eliminar_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
-            this.eliminar_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.eliminar_btn.Image = ((System.Drawing.Image)(resources.GetObject("eliminar_btn.Image")));
-            this.eliminar_btn.Location = new System.Drawing.Point(724, 237);
-            this.eliminar_btn.Name = "eliminar_btn";
-            this.eliminar_btn.Size = new System.Drawing.Size(131, 42);
-            this.eliminar_btn.TabIndex = 36;
-            this.eliminar_btn.Text = " Eliminar";
-            this.eliminar_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.eliminar_btn.UseVisualStyleBackColor = true;
-            // 
-            // limpiar_btn
-            // 
-            this.limpiar_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
-            this.limpiar_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.limpiar_btn.Image = ((System.Drawing.Image)(resources.GetObject("limpiar_btn.Image")));
-            this.limpiar_btn.Location = new System.Drawing.Point(724, 180);
-            this.limpiar_btn.Name = "limpiar_btn";
-            this.limpiar_btn.Size = new System.Drawing.Size(131, 42);
-            this.limpiar_btn.TabIndex = 35;
-            this.limpiar_btn.Text = "Limpiar";
-            this.limpiar_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.limpiar_btn.UseVisualStyleBackColor = true;
-            // 
-            // modificar_btn
-            // 
-            this.modificar_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
-            this.modificar_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.modificar_btn.Image = ((System.Drawing.Image)(resources.GetObject("modificar_btn.Image")));
-            this.modificar_btn.Location = new System.Drawing.Point(724, 124);
-            this.modificar_btn.Name = "modificar_btn";
-            this.modificar_btn.Size = new System.Drawing.Size(131, 42);
-            this.modificar_btn.TabIndex = 34;
-            this.modificar_btn.Text = " Modificar";
-            this.modificar_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.modificar_btn.UseVisualStyleBackColor = true;
-            // 
-            // nuevo_btn
-            // 
-            this.nuevo_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
-            this.nuevo_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nuevo_btn.Image = ((System.Drawing.Image)(resources.GetObject("nuevo_btn.Image")));
-            this.nuevo_btn.Location = new System.Drawing.Point(724, 71);
-            this.nuevo_btn.Name = "nuevo_btn";
-            this.nuevo_btn.Size = new System.Drawing.Size(131, 42);
-            this.nuevo_btn.TabIndex = 33;
-            this.nuevo_btn.Text = "  Nuevo";
-            this.nuevo_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.nuevo_btn.UseVisualStyleBackColor = true;
             // 
             // textBox5
             // 
@@ -659,39 +607,6 @@
             this.label2.Text = "INVENTARIO";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // menu_btn
-            // 
-            this.menu_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.menu_btn.BackColor = System.Drawing.Color.Linen;
-            this.menu_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("menu_btn.BackgroundImage")));
-            this.menu_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.menu_btn.FlatAppearance.BorderSize = 0;
-            this.menu_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.menu_btn.Location = new System.Drawing.Point(47, 392);
-            this.menu_btn.Name = "menu_btn";
-            this.menu_btn.Size = new System.Drawing.Size(110, 110);
-            this.menu_btn.TabIndex = 39;
-            this.menu_btn.UseVisualStyleBackColor = false;
-            this.menu_btn.Click += new System.EventHandler(this.menu_btn_Click);
-            // 
-            // cerrarsesion_btn
-            // 
-            this.cerrarsesion_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.cerrarsesion_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cerrarsesion_btn.FlatAppearance.BorderSize = 0;
-            this.cerrarsesion_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cerrarsesion_btn.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cerrarsesion_btn.Image = ((System.Drawing.Image)(resources.GetObject("cerrarsesion_btn.Image")));
-            this.cerrarsesion_btn.Location = new System.Drawing.Point(17, 508);
-            this.cerrarsesion_btn.Name = "cerrarsesion_btn";
-            this.cerrarsesion_btn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cerrarsesion_btn.Size = new System.Drawing.Size(166, 41);
-            this.cerrarsesion_btn.TabIndex = 38;
-            this.cerrarsesion_btn.Text = "Cerrar Sesión";
-            this.cerrarsesion_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cerrarsesion_btn.UseVisualStyleBackColor = true;
-            this.cerrarsesion_btn.Click += new System.EventHandler(this.cerrarsesion_btn_Click);
-            // 
             // hcompras_btn
             // 
             this.hcompras_btn.AutoSize = true;
@@ -730,6 +645,96 @@
             // 
             this.productoesTableAdapter.ClearBeforeFill = true;
             // 
+            // eliminar_btn
+            // 
+            this.eliminar_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.eliminar_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
+            this.eliminar_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.eliminar_btn.Image = ((System.Drawing.Image)(resources.GetObject("eliminar_btn.Image")));
+            this.eliminar_btn.Location = new System.Drawing.Point(724, 237);
+            this.eliminar_btn.Name = "eliminar_btn";
+            this.eliminar_btn.Size = new System.Drawing.Size(131, 42);
+            this.eliminar_btn.TabIndex = 36;
+            this.eliminar_btn.Text = " Eliminar";
+            this.eliminar_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.eliminar_btn.UseVisualStyleBackColor = true;
+            // 
+            // limpiar_btn
+            // 
+            this.limpiar_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.limpiar_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
+            this.limpiar_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.limpiar_btn.Image = ((System.Drawing.Image)(resources.GetObject("limpiar_btn.Image")));
+            this.limpiar_btn.Location = new System.Drawing.Point(724, 180);
+            this.limpiar_btn.Name = "limpiar_btn";
+            this.limpiar_btn.Size = new System.Drawing.Size(131, 42);
+            this.limpiar_btn.TabIndex = 35;
+            this.limpiar_btn.Text = "Limpiar";
+            this.limpiar_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.limpiar_btn.UseVisualStyleBackColor = true;
+            // 
+            // modificar_btn
+            // 
+            this.modificar_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.modificar_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
+            this.modificar_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.modificar_btn.Image = ((System.Drawing.Image)(resources.GetObject("modificar_btn.Image")));
+            this.modificar_btn.Location = new System.Drawing.Point(724, 124);
+            this.modificar_btn.Name = "modificar_btn";
+            this.modificar_btn.Size = new System.Drawing.Size(131, 42);
+            this.modificar_btn.TabIndex = 34;
+            this.modificar_btn.Text = " Modificar";
+            this.modificar_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.modificar_btn.UseVisualStyleBackColor = true;
+            // 
+            // nuevo_btn
+            // 
+            this.nuevo_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nuevo_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
+            this.nuevo_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nuevo_btn.Image = ((System.Drawing.Image)(resources.GetObject("nuevo_btn.Image")));
+            this.nuevo_btn.Location = new System.Drawing.Point(724, 71);
+            this.nuevo_btn.Name = "nuevo_btn";
+            this.nuevo_btn.Size = new System.Drawing.Size(131, 42);
+            this.nuevo_btn.TabIndex = 33;
+            this.nuevo_btn.Text = "  Nuevo";
+            this.nuevo_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.nuevo_btn.UseVisualStyleBackColor = true;
+            // 
+            // menu_btn
+            // 
+            this.menu_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.menu_btn.BackColor = System.Drawing.Color.Linen;
+            this.menu_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("menu_btn.BackgroundImage")));
+            this.menu_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.menu_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.menu_btn.FlatAppearance.BorderSize = 0;
+            this.menu_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.menu_btn.Location = new System.Drawing.Point(47, 392);
+            this.menu_btn.Name = "menu_btn";
+            this.menu_btn.Size = new System.Drawing.Size(110, 110);
+            this.menu_btn.TabIndex = 39;
+            this.menu_btn.UseVisualStyleBackColor = false;
+            this.menu_btn.Click += new System.EventHandler(this.menu_btn_Click);
+            // 
+            // cerrarsesion_btn
+            // 
+            this.cerrarsesion_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cerrarsesion_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cerrarsesion_btn.FlatAppearance.BorderSize = 0;
+            this.cerrarsesion_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cerrarsesion_btn.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cerrarsesion_btn.Image = ((System.Drawing.Image)(resources.GetObject("cerrarsesion_btn.Image")));
+            this.cerrarsesion_btn.Location = new System.Drawing.Point(17, 508);
+            this.cerrarsesion_btn.Name = "cerrarsesion_btn";
+            this.cerrarsesion_btn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cerrarsesion_btn.Size = new System.Drawing.Size(166, 41);
+            this.cerrarsesion_btn.TabIndex = 38;
+            this.cerrarsesion_btn.Text = "Cerrar Sesión";
+            this.cerrarsesion_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cerrarsesion_btn.UseVisualStyleBackColor = true;
+            this.cerrarsesion_btn.Click += new System.EventHandler(this.cerrarsesion_btn_Click);
+            // 
             // Inventario_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -743,6 +748,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menu_btn);
             this.Controls.Add(this.cerrarsesion_btn);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1100, 600);
             this.Name = "Inventario_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

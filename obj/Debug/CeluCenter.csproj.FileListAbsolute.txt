@@ -19,3 +19,7 @@ E:\Celeste\Universidad\Actualizacion Tecnologica\CeluCenter\obj\Debug\CeluCenter
 E:\Celeste\Universidad\Actualizacion Tecnologica\CeluCenter\obj\Debug\CeluCenter.Vistas.HistorialCompras_form.resources
 E:\Celeste\Universidad\Actualizacion Tecnologica\CeluCenter\obj\Debug\CeluCenter.Vistas.HistorialVentas_form.resources
 E:\Celeste\Universidad\Actualizacion Tecnologica\CeluCenter\obj\Debug\CeluCenter.Vistas.Inventario_form.resources
+E:\Celeste\Universidad\Actualizacion Tecnologica\CeluCenter\obj\Debug\CeluCenter.Vistas.Nuevaventa_form.resources
+E:\Celeste\Universidad\Actualizacion Tecnologica\CeluCenter\obj\Debug\CeluCenter.Vistas.Nuevacompra_form.resources
+E:\Celeste\Universidad\Actualizacion Tecnologica\CeluCenter\obj\Debug\CeluCenter.Vistas.Reportes_form.resources
+E:\Celeste\Universidad\Actualizacion Tecnologica\CeluCenter\obj\Debug\CeluCenter.Vistas.Registrocliente_form.resources

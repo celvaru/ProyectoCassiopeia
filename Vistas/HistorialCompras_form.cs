@@ -63,10 +63,10 @@ namespace CeluCenter.Vistas
             this.hcompras_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.IndianRed;
             this.hcompras_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightPink;
             this.hcompras_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.hcompras_btn.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hcompras_btn.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hcompras_btn.Location = new System.Drawing.Point(7, 25);
             this.hcompras_btn.Name = "hcompras_btn";
-            this.hcompras_btn.Size = new System.Drawing.Size(205, 43);
+            this.hcompras_btn.Size = new System.Drawing.Size(219, 43);
             this.hcompras_btn.TabIndex = 22;
             this.hcompras_btn.Text = "Historial de compras";
             this.hcompras_btn.UseVisualStyleBackColor = false;
@@ -198,6 +198,7 @@ namespace CeluCenter.Vistas
             // 
             // buscar_btn
             // 
+            this.buscar_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buscar_btn.FlatAppearance.BorderColor = System.Drawing.Color.IndianRed;
             this.buscar_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buscar_btn.Location = new System.Drawing.Point(689, 94);
@@ -315,6 +316,7 @@ namespace CeluCenter.Vistas
             this.menu_btn.BackColor = System.Drawing.Color.Linen;
             this.menu_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("menu_btn.BackgroundImage")));
             this.menu_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.menu_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.menu_btn.FlatAppearance.BorderSize = 0;
             this.menu_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.menu_btn.Location = new System.Drawing.Point(47, 392);
@@ -353,6 +355,7 @@ namespace CeluCenter.Vistas
             this.Controls.Add(this.gusuario_btn);
             this.Controls.Add(this.hcompras_btn);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1150, 600);
             this.Name = "HistorialCompras_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

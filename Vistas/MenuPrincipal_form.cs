@@ -28,21 +28,21 @@ namespace CeluCenter.Vistas
         {
             HistorialVentas_form historialVentas_Form = new HistorialVentas_form();
             historialVentas_Form.Show();
-            this.Dispose();
+            this.Close();
         }
 
         private void inventario_btn_Click(object sender, EventArgs e)
         {
             Inventario_form inventario_Form = new Inventario_form();
             inventario_Form.Show();
-            this.Dispose();
+            this.Close();
         }
 
         private void gusuario_btn_Click(object sender, EventArgs e)
         {
             GestionarUsuario_form gestionarUsuario_Form = new GestionarUsuario_form();
             gestionarUsuario_Form.Show();
-            this.Dispose();
+            this.Close();
         }
 
         private void cerrarsesion_btn_Click(object sender, EventArgs e)
@@ -50,6 +50,25 @@ namespace CeluCenter.Vistas
             Login_form login_form = new Login_form();  
             login_form.Show();
             this.Close();
+        }
+
+        private void nventa_btn_Click(object sender, EventArgs e)
+        {
+            Nuevaventa_form nuevaventa_Form = new Nuevaventa_form();
+            nuevaventa_Form.Show();
+
+        }
+
+        private void ncompra_btn_Click(object sender, EventArgs e)
+        {
+            Nuevacompra_form nuevacompra_Form = new Nuevacompra_form();
+            nuevacompra_Form.Show();
+        }
+
+        private void nreporte_btn_Click(object sender, EventArgs e)
+        {
+            Reportes_form reportes_Form = new Reportes_form();
+            reportes_Form.Show();
         }
     }
 }

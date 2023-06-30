@@ -49,14 +49,14 @@
             this.buscarpor_combo = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.menu_btn = new System.Windows.Forms.Button();
-            this.cerrarsesion_btn = new System.Windows.Forms.Button();
             this.hcompras_btn = new System.Windows.Forms.Button();
             this.hventas_btn = new System.Windows.Forms.Button();
             this.celuCenterDataSet = new CeluCenter.CeluCenterDataSet();
             this.celuCenterDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ventasTableAdapter = new CeluCenter.CeluCenterDataSetVentasTableAdapters.VentasTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.menu_btn = new System.Windows.Forms.Button();
+            this.cerrarsesion_btn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ventas_tabla)).BeginInit();
@@ -220,6 +220,7 @@
             // 
             // buscar_btn
             // 
+            this.buscar_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buscar_btn.FlatAppearance.BorderColor = System.Drawing.Color.SandyBrown;
             this.buscar_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buscar_btn.Location = new System.Drawing.Point(700, 88);
@@ -269,39 +270,6 @@
             this.label2.Text = "HISTORIAL DE VENTAS";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // menu_btn
-            // 
-            this.menu_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.menu_btn.BackColor = System.Drawing.Color.Linen;
-            this.menu_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("menu_btn.BackgroundImage")));
-            this.menu_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.menu_btn.FlatAppearance.BorderSize = 0;
-            this.menu_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.menu_btn.Location = new System.Drawing.Point(47, 392);
-            this.menu_btn.Name = "menu_btn";
-            this.menu_btn.Size = new System.Drawing.Size(110, 110);
-            this.menu_btn.TabIndex = 19;
-            this.menu_btn.UseVisualStyleBackColor = false;
-            this.menu_btn.Click += new System.EventHandler(this.menu_btn_Click);
-            // 
-            // cerrarsesion_btn
-            // 
-            this.cerrarsesion_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.cerrarsesion_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cerrarsesion_btn.FlatAppearance.BorderSize = 0;
-            this.cerrarsesion_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cerrarsesion_btn.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cerrarsesion_btn.Image = ((System.Drawing.Image)(resources.GetObject("cerrarsesion_btn.Image")));
-            this.cerrarsesion_btn.Location = new System.Drawing.Point(17, 508);
-            this.cerrarsesion_btn.Name = "cerrarsesion_btn";
-            this.cerrarsesion_btn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cerrarsesion_btn.Size = new System.Drawing.Size(166, 41);
-            this.cerrarsesion_btn.TabIndex = 18;
-            this.cerrarsesion_btn.Text = "Cerrar Sesión";
-            this.cerrarsesion_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cerrarsesion_btn.UseVisualStyleBackColor = true;
-            this.cerrarsesion_btn.Click += new System.EventHandler(this.cerrarsesion_btn_Click);
-            // 
             // hcompras_btn
             // 
             this.hcompras_btn.AutoSize = true;
@@ -332,7 +300,7 @@
             this.hventas_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SandyBrown;
             this.hventas_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SandyBrown;
             this.hventas_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.hventas_btn.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hventas_btn.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hventas_btn.Location = new System.Drawing.Point(7, 74);
             this.hventas_btn.Name = "hventas_btn";
             this.hventas_btn.Size = new System.Drawing.Size(205, 43);
@@ -371,6 +339,40 @@
             this.dataGridView1.Size = new System.Drawing.Size(638, 291);
             this.dataGridView1.TabIndex = 14;
             // 
+            // menu_btn
+            // 
+            this.menu_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.menu_btn.BackColor = System.Drawing.Color.Linen;
+            this.menu_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("menu_btn.BackgroundImage")));
+            this.menu_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.menu_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.menu_btn.FlatAppearance.BorderSize = 0;
+            this.menu_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.menu_btn.Location = new System.Drawing.Point(47, 392);
+            this.menu_btn.Name = "menu_btn";
+            this.menu_btn.Size = new System.Drawing.Size(110, 110);
+            this.menu_btn.TabIndex = 19;
+            this.menu_btn.UseVisualStyleBackColor = false;
+            this.menu_btn.Click += new System.EventHandler(this.menu_btn_Click);
+            // 
+            // cerrarsesion_btn
+            // 
+            this.cerrarsesion_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cerrarsesion_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cerrarsesion_btn.FlatAppearance.BorderSize = 0;
+            this.cerrarsesion_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cerrarsesion_btn.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cerrarsesion_btn.Image = ((System.Drawing.Image)(resources.GetObject("cerrarsesion_btn.Image")));
+            this.cerrarsesion_btn.Location = new System.Drawing.Point(17, 508);
+            this.cerrarsesion_btn.Name = "cerrarsesion_btn";
+            this.cerrarsesion_btn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cerrarsesion_btn.Size = new System.Drawing.Size(166, 41);
+            this.cerrarsesion_btn.TabIndex = 18;
+            this.cerrarsesion_btn.Text = "Cerrar Sesión";
+            this.cerrarsesion_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cerrarsesion_btn.UseVisualStyleBackColor = true;
+            this.cerrarsesion_btn.Click += new System.EventHandler(this.cerrarsesion_btn_Click);
+            // 
             // HistorialVentas_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,6 +386,7 @@
             this.Controls.Add(this.inventario_btn);
             this.Controls.Add(this.gusuario_btn);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1150, 600);
             this.Name = "HistorialVentas_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

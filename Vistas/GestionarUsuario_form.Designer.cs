@@ -31,18 +31,15 @@ namespace CeluCenter.Vistas
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionarUsuario_form));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionarUsuario_form));
             this.hventas_btn = new System.Windows.Forms.Button();
             this.hcompras_btn = new System.Windows.Forms.Button();
             this.gusuario_btn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.eliminar_btn = new System.Windows.Forms.Button();
-            this.modificar_btn = new System.Windows.Forms.Button();
-            this.nuevo_btn = new System.Windows.Forms.Button();
             this.usuarios_tabla = new System.Windows.Forms.DataGridView();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,10 +64,13 @@ namespace CeluCenter.Vistas
             this.nombre_txt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.menu_btn = new System.Windows.Forms.Button();
-            this.cerrarsesion_btn = new System.Windows.Forms.Button();
             this.inventario_btn = new System.Windows.Forms.Button();
             this.usuariosTableAdapter = new CeluCenter.CeluCenterUsuariosTableAdapters.UsuariosTableAdapter();
+            this.menu_btn = new System.Windows.Forms.Button();
+            this.cerrarsesion_btn = new System.Windows.Forms.Button();
+            this.eliminar_btn = new System.Windows.Forms.Button();
+            this.modificar_btn = new System.Windows.Forms.Button();
+            this.nuevo_btn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usuarios_tabla)).BeginInit();
@@ -177,48 +177,6 @@ namespace CeluCenter.Vistas
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(873, 512);
             this.panel2.TabIndex = 34;
-            // 
-            // eliminar_btn
-            // 
-            this.eliminar_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.eliminar_btn.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
-            this.eliminar_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.eliminar_btn.Image = ((System.Drawing.Image)(resources.GetObject("eliminar_btn.Image")));
-            this.eliminar_btn.Location = new System.Drawing.Point(677, 259);
-            this.eliminar_btn.Name = "eliminar_btn";
-            this.eliminar_btn.Size = new System.Drawing.Size(145, 52);
-            this.eliminar_btn.TabIndex = 24;
-            this.eliminar_btn.Text = " Eliminar";
-            this.eliminar_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.eliminar_btn.UseVisualStyleBackColor = true;
-            // 
-            // modificar_btn
-            // 
-            this.modificar_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.modificar_btn.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
-            this.modificar_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.modificar_btn.Image = ((System.Drawing.Image)(resources.GetObject("modificar_btn.Image")));
-            this.modificar_btn.Location = new System.Drawing.Point(677, 186);
-            this.modificar_btn.Name = "modificar_btn";
-            this.modificar_btn.Size = new System.Drawing.Size(145, 52);
-            this.modificar_btn.TabIndex = 23;
-            this.modificar_btn.Text = " Modificar";
-            this.modificar_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.modificar_btn.UseVisualStyleBackColor = true;
-            // 
-            // nuevo_btn
-            // 
-            this.nuevo_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.nuevo_btn.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
-            this.nuevo_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nuevo_btn.Image = ((System.Drawing.Image)(resources.GetObject("nuevo_btn.Image")));
-            this.nuevo_btn.Location = new System.Drawing.Point(677, 112);
-            this.nuevo_btn.Name = "nuevo_btn";
-            this.nuevo_btn.Size = new System.Drawing.Size(145, 52);
-            this.nuevo_btn.TabIndex = 22;
-            this.nuevo_btn.Text = "   Nuevo";
-            this.nuevo_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.nuevo_btn.UseVisualStyleBackColor = true;
             // 
             // usuarios_tabla
             // 
@@ -448,12 +406,36 @@ namespace CeluCenter.Vistas
             this.label2.Text = "GESTION DE USUARIOS";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // inventario_btn
+            // 
+            this.inventario_btn.AutoSize = true;
+            this.inventario_btn.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.inventario_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.inventario_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.inventario_btn.FlatAppearance.BorderSize = 0;
+            this.inventario_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
+            this.inventario_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGoldenrod;
+            this.inventario_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.inventario_btn.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventario_btn.Location = new System.Drawing.Point(7, 123);
+            this.inventario_btn.Name = "inventario_btn";
+            this.inventario_btn.Size = new System.Drawing.Size(205, 43);
+            this.inventario_btn.TabIndex = 10;
+            this.inventario_btn.Text = "Inventario";
+            this.inventario_btn.UseVisualStyleBackColor = false;
+            this.inventario_btn.Click += new System.EventHandler(this.inventario_btn_Click);
+            // 
+            // usuariosTableAdapter
+            // 
+            this.usuariosTableAdapter.ClearBeforeFill = true;
+            // 
             // menu_btn
             // 
             this.menu_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.menu_btn.BackColor = System.Drawing.Color.Linen;
             this.menu_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("menu_btn.BackgroundImage")));
             this.menu_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.menu_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.menu_btn.FlatAppearance.BorderSize = 0;
             this.menu_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.menu_btn.Location = new System.Drawing.Point(47, 392);
@@ -481,28 +463,50 @@ namespace CeluCenter.Vistas
             this.cerrarsesion_btn.UseVisualStyleBackColor = true;
             this.cerrarsesion_btn.Click += new System.EventHandler(this.cerrarsesion_btn_Click);
             // 
-            // inventario_btn
+            // eliminar_btn
             // 
-            this.inventario_btn.AutoSize = true;
-            this.inventario_btn.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.inventario_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.inventario_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.inventario_btn.FlatAppearance.BorderSize = 0;
-            this.inventario_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
-            this.inventario_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGoldenrod;
-            this.inventario_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inventario_btn.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inventario_btn.Location = new System.Drawing.Point(7, 123);
-            this.inventario_btn.Name = "inventario_btn";
-            this.inventario_btn.Size = new System.Drawing.Size(205, 43);
-            this.inventario_btn.TabIndex = 10;
-            this.inventario_btn.Text = "Inventario";
-            this.inventario_btn.UseVisualStyleBackColor = false;
-            this.inventario_btn.Click += new System.EventHandler(this.inventario_btn_Click);
+            this.eliminar_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.eliminar_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.eliminar_btn.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
+            this.eliminar_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.eliminar_btn.Image = ((System.Drawing.Image)(resources.GetObject("eliminar_btn.Image")));
+            this.eliminar_btn.Location = new System.Drawing.Point(677, 259);
+            this.eliminar_btn.Name = "eliminar_btn";
+            this.eliminar_btn.Size = new System.Drawing.Size(145, 52);
+            this.eliminar_btn.TabIndex = 24;
+            this.eliminar_btn.Text = " Eliminar";
+            this.eliminar_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.eliminar_btn.UseVisualStyleBackColor = true;
             // 
-            // usuariosTableAdapter
+            // modificar_btn
             // 
-            this.usuariosTableAdapter.ClearBeforeFill = true;
+            this.modificar_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.modificar_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.modificar_btn.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
+            this.modificar_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.modificar_btn.Image = ((System.Drawing.Image)(resources.GetObject("modificar_btn.Image")));
+            this.modificar_btn.Location = new System.Drawing.Point(677, 186);
+            this.modificar_btn.Name = "modificar_btn";
+            this.modificar_btn.Size = new System.Drawing.Size(145, 52);
+            this.modificar_btn.TabIndex = 23;
+            this.modificar_btn.Text = " Modificar";
+            this.modificar_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.modificar_btn.UseVisualStyleBackColor = true;
+            // 
+            // nuevo_btn
+            // 
+            this.nuevo_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.nuevo_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nuevo_btn.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
+            this.nuevo_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nuevo_btn.Image = ((System.Drawing.Image)(resources.GetObject("nuevo_btn.Image")));
+            this.nuevo_btn.Location = new System.Drawing.Point(677, 112);
+            this.nuevo_btn.Name = "nuevo_btn";
+            this.nuevo_btn.Size = new System.Drawing.Size(145, 52);
+            this.nuevo_btn.TabIndex = 22;
+            this.nuevo_btn.Text = "   Nuevo";
+            this.nuevo_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.nuevo_btn.UseVisualStyleBackColor = true;
             // 
             // GestionarUsuario_form
             // 
@@ -517,6 +521,7 @@ namespace CeluCenter.Vistas
             this.Controls.Add(this.cerrarsesion_btn);
             this.Controls.Add(this.gusuario_btn);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1150, 600);
             this.Name = "GestionarUsuario_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
