@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Nuevaventa_form));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,11 +60,22 @@
             this.cancelar_btn = new System.Windows.Forms.Button();
             this.imprimir_btn = new System.Windows.Forms.Button();
             this.aceptar_btn = new System.Windows.Forms.Button();
+            this.detalle_tabla = new System.Windows.Forms.DataGridView();
+            this.celuCenterDetalle = new CeluCenter.CeluCenterDetalle();
+            this.detalleVentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.detalle_VentaTableAdapter = new CeluCenter.CeluCenterDetalleTableAdapters.Detalle_VentaTableAdapter();
+            this.subTotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productoCodigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.detalle_tabla)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.celuCenterDetalle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detalleVentaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -84,6 +99,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.detalle_tabla);
             this.splitContainer1.Panel2.Controls.Add(this.imprimir_btn);
             this.splitContainer1.Panel2.Controls.Add(this.aceptar_btn);
             this.splitContainer1.Panel2.Controls.Add(this.anadir_btn);
@@ -363,6 +379,95 @@
             this.aceptar_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.aceptar_btn.UseVisualStyleBackColor = true;
             // 
+            // detalle_tabla
+            // 
+            this.detalle_tabla.AllowUserToAddRows = false;
+            this.detalle_tabla.AllowUserToDeleteRows = false;
+            this.detalle_tabla.AllowUserToOrderColumns = true;
+            this.detalle_tabla.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.detalle_tabla.AutoGenerateColumns = false;
+            this.detalle_tabla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.detalle_tabla.BackgroundColor = System.Drawing.Color.DarkCyan;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MediumTurquoise;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.detalle_tabla.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.detalle_tabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.detalle_tabla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.subTotalDataGridViewTextBoxColumn,
+            this.cantidadVentaDataGridViewTextBoxColumn,
+            this.precioVentaDataGridViewTextBoxColumn,
+            this.productoCodigoDataGridViewTextBoxColumn});
+            this.detalle_tabla.DataSource = this.detalleVentaBindingSource;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumTurquoise;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.detalle_tabla.DefaultCellStyle = dataGridViewCellStyle2;
+            this.detalle_tabla.Location = new System.Drawing.Point(25, 237);
+            this.detalle_tabla.Name = "detalle_tabla";
+            this.detalle_tabla.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumTurquoise;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.detalle_tabla.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.detalle_tabla.Size = new System.Drawing.Size(596, 230);
+            this.detalle_tabla.TabIndex = 17;
+            // 
+            // celuCenterDetalle
+            // 
+            this.celuCenterDetalle.DataSetName = "CeluCenterDetalle";
+            this.celuCenterDetalle.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // detalleVentaBindingSource
+            // 
+            this.detalleVentaBindingSource.DataMember = "Detalle_Venta";
+            this.detalleVentaBindingSource.DataSource = this.celuCenterDetalle;
+            // 
+            // detalle_VentaTableAdapter
+            // 
+            this.detalle_VentaTableAdapter.ClearBeforeFill = true;
+            // 
+            // subTotalDataGridViewTextBoxColumn
+            // 
+            this.subTotalDataGridViewTextBoxColumn.DataPropertyName = "Sub_Total";
+            this.subTotalDataGridViewTextBoxColumn.HeaderText = "Sub Total";
+            this.subTotalDataGridViewTextBoxColumn.Name = "subTotalDataGridViewTextBoxColumn";
+            this.subTotalDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cantidadVentaDataGridViewTextBoxColumn
+            // 
+            this.cantidadVentaDataGridViewTextBoxColumn.DataPropertyName = "Cantidad_Venta";
+            this.cantidadVentaDataGridViewTextBoxColumn.HeaderText = "Cantidad";
+            this.cantidadVentaDataGridViewTextBoxColumn.Name = "cantidadVentaDataGridViewTextBoxColumn";
+            this.cantidadVentaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // precioVentaDataGridViewTextBoxColumn
+            // 
+            this.precioVentaDataGridViewTextBoxColumn.DataPropertyName = "Precio_Venta";
+            this.precioVentaDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioVentaDataGridViewTextBoxColumn.Name = "precioVentaDataGridViewTextBoxColumn";
+            this.precioVentaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // productoCodigoDataGridViewTextBoxColumn
+            // 
+            this.productoCodigoDataGridViewTextBoxColumn.DataPropertyName = "Producto_Codigo";
+            this.productoCodigoDataGridViewTextBoxColumn.HeaderText = "Producto";
+            this.productoCodigoDataGridViewTextBoxColumn.Name = "productoCodigoDataGridViewTextBoxColumn";
+            this.productoCodigoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // Nuevaventa_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -375,6 +480,7 @@
             this.Name = "Nuevaventa_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CELUCENTER - Nueva venta";
+            this.Load += new System.EventHandler(this.Nuevaventa_form_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -383,6 +489,9 @@
             this.splitContainer1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.detalle_tabla)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.celuCenterDetalle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detalleVentaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -416,5 +525,13 @@
         private System.Windows.Forms.Button imprimir_btn;
         private System.Windows.Forms.Button aceptar_btn;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DataGridView detalle_tabla;
+        private CeluCenterDetalle celuCenterDetalle;
+        private System.Windows.Forms.BindingSource detalleVentaBindingSource;
+        private CeluCenterDetalleTableAdapters.Detalle_VentaTableAdapter detalle_VentaTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subTotalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadVentaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioVentaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productoCodigoDataGridViewTextBoxColumn;
     }
 }

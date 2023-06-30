@@ -21,5 +21,12 @@ namespace CeluCenter.Vistas
         {
             this.Close();
         }
+
+        private void Registrocliente_form_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'celuCenterCliente.Clientes' Puede moverla o quitarla según sea necesario.
+            this.clientesTableAdapter.Fill(this.celuCenterCliente.Clientes);
+
+        }
     }
 }

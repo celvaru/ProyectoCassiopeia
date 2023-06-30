@@ -28,7 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reportes_form));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,6 +47,22 @@
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.volver_btn = new System.Windows.Forms.Button();
             this.imprimir_btn = new System.Windows.Forms.Button();
+            this.reporte_tabla = new System.Windows.Forms.DataGridView();
+            this.periodo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ingresos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.egresos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ganancias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.celuCenterDataSetVentas = new CeluCenter.CeluCenterDataSetVentas();
+            this.celuCenterDataSetVentasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.masvendidos_tabla = new System.Windows.Forms.DataGridView();
+            this.celuCenterDataSet1 = new CeluCenter.CeluCenterDataSet();
+            ((System.ComponentModel.ISupportInitialize)(this.reporte_tabla)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.celuCenterDataSetVentas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.celuCenterDataSetVentasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masvendidos_tabla)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.celuCenterDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -172,12 +195,145 @@
             this.imprimir_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.imprimir_btn.UseVisualStyleBackColor = true;
             // 
+            // reporte_tabla
+            // 
+            this.reporte_tabla.AllowUserToAddRows = false;
+            this.reporte_tabla.AllowUserToDeleteRows = false;
+            this.reporte_tabla.AllowUserToOrderColumns = true;
+            this.reporte_tabla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.reporte_tabla.BackgroundColor = System.Drawing.Color.DarkCyan;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MediumTurquoise;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.reporte_tabla.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.reporte_tabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.reporte_tabla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.periodo,
+            this.ingresos,
+            this.egresos,
+            this.ganancias});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumTurquoise;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.reporte_tabla.DefaultCellStyle = dataGridViewCellStyle2;
+            this.reporte_tabla.Location = new System.Drawing.Point(16, 194);
+            this.reporte_tabla.Name = "reporte_tabla";
+            this.reporte_tabla.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumTurquoise;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.reporte_tabla.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.reporte_tabla.Size = new System.Drawing.Size(368, 273);
+            this.reporte_tabla.TabIndex = 12;
+            // 
+            // periodo
+            // 
+            this.periodo.HeaderText = "Semana/Mes";
+            this.periodo.Name = "periodo";
+            this.periodo.ReadOnly = true;
+            // 
+            // ingresos
+            // 
+            this.ingresos.HeaderText = "Ingresos";
+            this.ingresos.Name = "ingresos";
+            this.ingresos.ReadOnly = true;
+            // 
+            // egresos
+            // 
+            this.egresos.HeaderText = "Egresos";
+            this.egresos.Name = "egresos";
+            this.egresos.ReadOnly = true;
+            // 
+            // ganancias
+            // 
+            this.ganancias.HeaderText = "Ganancias";
+            this.ganancias.Name = "ganancias";
+            this.ganancias.ReadOnly = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.masvendidos_tabla);
+            this.groupBox1.Location = new System.Drawing.Point(406, 194);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(306, 273);
+            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Celulares más vendidos";
+            // 
+            // celuCenterDataSetVentas
+            // 
+            this.celuCenterDataSetVentas.DataSetName = "CeluCenterDataSetVentas";
+            this.celuCenterDataSetVentas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // celuCenterDataSetVentasBindingSource
+            // 
+            this.celuCenterDataSetVentasBindingSource.DataSource = this.celuCenterDataSetVentas;
+            this.celuCenterDataSetVentasBindingSource.Position = 0;
+            // 
+            // masvendidos_tabla
+            // 
+            this.masvendidos_tabla.AllowUserToAddRows = false;
+            this.masvendidos_tabla.AllowUserToDeleteRows = false;
+            this.masvendidos_tabla.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.masvendidos_tabla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.masvendidos_tabla.BackgroundColor = System.Drawing.Color.DarkCyan;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.MediumTurquoise;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.masvendidos_tabla.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.masvendidos_tabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.MediumTurquoise;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.masvendidos_tabla.DefaultCellStyle = dataGridViewCellStyle5;
+            this.masvendidos_tabla.Location = new System.Drawing.Point(17, 29);
+            this.masvendidos_tabla.Name = "masvendidos_tabla";
+            this.masvendidos_tabla.ReadOnly = true;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MediumTurquoise;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.masvendidos_tabla.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.masvendidos_tabla.Size = new System.Drawing.Size(272, 221);
+            this.masvendidos_tabla.TabIndex = 0;
+            // 
+            // celuCenterDataSet1
+            // 
+            this.celuCenterDataSet1.DataSetName = "CeluCenterDataSet";
+            this.celuCenterDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // Reportes_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(734, 561);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.reporte_tabla);
             this.Controls.Add(this.volver_btn);
             this.Controls.Add(this.imprimir_btn);
             this.Controls.Add(this.dateTimePicker3);
@@ -195,6 +351,12 @@
             this.MinimumSize = new System.Drawing.Size(750, 600);
             this.Name = "Reportes_form";
             this.Text = "CELUCENTER - Generador de reportes";
+            ((System.ComponentModel.ISupportInitialize)(this.reporte_tabla)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.celuCenterDataSetVentas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.celuCenterDataSetVentasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masvendidos_tabla)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.celuCenterDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,5 +375,15 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.Button imprimir_btn;
         private System.Windows.Forms.Button volver_btn;
+        private System.Windows.Forms.DataGridView reporte_tabla;
+        private System.Windows.Forms.DataGridViewTextBoxColumn periodo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ingresos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn egresos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ganancias;
+        private System.Windows.Forms.BindingSource celuCenterDataSetVentasBindingSource;
+        private CeluCenterDataSetVentas celuCenterDataSetVentas;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView masvendidos_tabla;
+        private CeluCenterDataSet celuCenterDataSet1;
     }
 }

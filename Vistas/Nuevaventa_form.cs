@@ -27,5 +27,12 @@ namespace CeluCenter.Vistas
             Registrocliente_form registrocliente_Form = new Registrocliente_form();
             registrocliente_Form.ShowDialog();
         }
+
+        private void Nuevaventa_form_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'celuCenterDetalle.Detalle_Venta' Puede moverla o quitarla según sea necesario.
+            this.detalle_VentaTableAdapter.Fill(this.celuCenterDetalle.Detalle_Venta);
+
+        }
     }
 }
