@@ -31,22 +31,19 @@ namespace CeluCenter.Vistas
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionarUsuario_form));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionarUsuario_form));
             this.hventas_btn = new System.Windows.Forms.Button();
             this.hcompras_btn = new System.Windows.Forms.Button();
             this.gusuario_btn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.eliminar_btn = new System.Windows.Forms.Button();
+            this.modificar_btn = new System.Windows.Forms.Button();
+            this.nuevo_btn = new System.Windows.Forms.Button();
             this.usuarios_tabla = new System.Windows.Forms.DataGridView();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contactoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.discriminatorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.celuCenterUsuarios = new CeluCenter.CeluCenterUsuarios();
             this.cargo_combo = new System.Windows.Forms.ComboBox();
@@ -68,14 +65,20 @@ namespace CeluCenter.Vistas
             this.usuariosTableAdapter = new CeluCenter.CeluCenterUsuariosTableAdapters.UsuariosTableAdapter();
             this.menu_btn = new System.Windows.Forms.Button();
             this.cerrarsesion_btn = new System.Windows.Forms.Button();
-            this.eliminar_btn = new System.Windows.Forms.Button();
-            this.modificar_btn = new System.Windows.Forms.Button();
-            this.nuevo_btn = new System.Windows.Forms.Button();
+            this.celuCenterDataUsuarios = new CeluCenter.CeluCenterDataUsuarios();
+            this.usuariosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.usuariosTableAdapter1 = new CeluCenter.CeluCenterDataUsuariosTableAdapters.UsuariosTableAdapter();
+            this.celuCenterDataUsuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.celuCenterUsuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usuarios_tabla)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.celuCenterUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.celuCenterDataUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.celuCenterDataUsuariosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.celuCenterUsuariosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // hventas_btn
@@ -178,6 +181,51 @@ namespace CeluCenter.Vistas
             this.panel2.Size = new System.Drawing.Size(873, 512);
             this.panel2.TabIndex = 34;
             // 
+            // eliminar_btn
+            // 
+            this.eliminar_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.eliminar_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.eliminar_btn.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
+            this.eliminar_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.eliminar_btn.Image = ((System.Drawing.Image)(resources.GetObject("eliminar_btn.Image")));
+            this.eliminar_btn.Location = new System.Drawing.Point(677, 259);
+            this.eliminar_btn.Name = "eliminar_btn";
+            this.eliminar_btn.Size = new System.Drawing.Size(145, 52);
+            this.eliminar_btn.TabIndex = 24;
+            this.eliminar_btn.Text = " Eliminar";
+            this.eliminar_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.eliminar_btn.UseVisualStyleBackColor = true;
+            // 
+            // modificar_btn
+            // 
+            this.modificar_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.modificar_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.modificar_btn.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
+            this.modificar_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.modificar_btn.Image = ((System.Drawing.Image)(resources.GetObject("modificar_btn.Image")));
+            this.modificar_btn.Location = new System.Drawing.Point(677, 186);
+            this.modificar_btn.Name = "modificar_btn";
+            this.modificar_btn.Size = new System.Drawing.Size(145, 52);
+            this.modificar_btn.TabIndex = 23;
+            this.modificar_btn.Text = " Modificar";
+            this.modificar_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.modificar_btn.UseVisualStyleBackColor = true;
+            // 
+            // nuevo_btn
+            // 
+            this.nuevo_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.nuevo_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nuevo_btn.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
+            this.nuevo_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nuevo_btn.Image = ((System.Drawing.Image)(resources.GetObject("nuevo_btn.Image")));
+            this.nuevo_btn.Location = new System.Drawing.Point(677, 112);
+            this.nuevo_btn.Name = "nuevo_btn";
+            this.nuevo_btn.Size = new System.Drawing.Size(145, 52);
+            this.nuevo_btn.TabIndex = 22;
+            this.nuevo_btn.Text = "   Nuevo";
+            this.nuevo_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.nuevo_btn.UseVisualStyleBackColor = true;
+            // 
             // usuarios_tabla
             // 
             this.usuarios_tabla.AutoGenerateColumns = false;
@@ -192,14 +240,7 @@ namespace CeluCenter.Vistas
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.usuarios_tabla.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.usuarios_tabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.usuarios_tabla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nombreDataGridViewTextBoxColumn,
-            this.nomUsuarioDataGridViewTextBoxColumn,
-            this.passwordDataGridViewTextBoxColumn,
-            this.contactoDataGridViewTextBoxColumn,
-            this.cIDataGridViewTextBoxColumn,
-            this.discriminatorDataGridViewTextBoxColumn});
-            this.usuarios_tabla.DataSource = this.usuariosBindingSource;
+            this.usuarios_tabla.DataSource = this.celuCenterUsuariosBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -222,48 +263,6 @@ namespace CeluCenter.Vistas
             this.usuarios_tabla.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.usuarios_tabla.Size = new System.Drawing.Size(816, 150);
             this.usuarios_tabla.TabIndex = 21;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nomUsuarioDataGridViewTextBoxColumn
-            // 
-            this.nomUsuarioDataGridViewTextBoxColumn.DataPropertyName = "Nom_Usuario";
-            this.nomUsuarioDataGridViewTextBoxColumn.HeaderText = "Usuario";
-            this.nomUsuarioDataGridViewTextBoxColumn.Name = "nomUsuarioDataGridViewTextBoxColumn";
-            this.nomUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "Contraseña";
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // contactoDataGridViewTextBoxColumn
-            // 
-            this.contactoDataGridViewTextBoxColumn.DataPropertyName = "Contacto";
-            this.contactoDataGridViewTextBoxColumn.HeaderText = "Contacto";
-            this.contactoDataGridViewTextBoxColumn.Name = "contactoDataGridViewTextBoxColumn";
-            this.contactoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cIDataGridViewTextBoxColumn
-            // 
-            this.cIDataGridViewTextBoxColumn.DataPropertyName = "CI";
-            this.cIDataGridViewTextBoxColumn.HeaderText = "CI";
-            this.cIDataGridViewTextBoxColumn.Name = "cIDataGridViewTextBoxColumn";
-            this.cIDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // discriminatorDataGridViewTextBoxColumn
-            // 
-            this.discriminatorDataGridViewTextBoxColumn.DataPropertyName = "Discriminator";
-            this.discriminatorDataGridViewTextBoxColumn.HeaderText = "Cargo";
-            this.discriminatorDataGridViewTextBoxColumn.Name = "discriminatorDataGridViewTextBoxColumn";
-            this.discriminatorDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // usuariosBindingSource
             // 
@@ -463,50 +462,29 @@ namespace CeluCenter.Vistas
             this.cerrarsesion_btn.UseVisualStyleBackColor = true;
             this.cerrarsesion_btn.Click += new System.EventHandler(this.cerrarsesion_btn_Click);
             // 
-            // eliminar_btn
+            // celuCenterDataUsuarios
             // 
-            this.eliminar_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.eliminar_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.eliminar_btn.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
-            this.eliminar_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.eliminar_btn.Image = ((System.Drawing.Image)(resources.GetObject("eliminar_btn.Image")));
-            this.eliminar_btn.Location = new System.Drawing.Point(677, 259);
-            this.eliminar_btn.Name = "eliminar_btn";
-            this.eliminar_btn.Size = new System.Drawing.Size(145, 52);
-            this.eliminar_btn.TabIndex = 24;
-            this.eliminar_btn.Text = " Eliminar";
-            this.eliminar_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.eliminar_btn.UseVisualStyleBackColor = true;
+            this.celuCenterDataUsuarios.DataSetName = "CeluCenterDataUsuarios";
+            this.celuCenterDataUsuarios.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // modificar_btn
+            // usuariosBindingSource1
             // 
-            this.modificar_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.modificar_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.modificar_btn.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
-            this.modificar_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.modificar_btn.Image = ((System.Drawing.Image)(resources.GetObject("modificar_btn.Image")));
-            this.modificar_btn.Location = new System.Drawing.Point(677, 186);
-            this.modificar_btn.Name = "modificar_btn";
-            this.modificar_btn.Size = new System.Drawing.Size(145, 52);
-            this.modificar_btn.TabIndex = 23;
-            this.modificar_btn.Text = " Modificar";
-            this.modificar_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.modificar_btn.UseVisualStyleBackColor = true;
+            this.usuariosBindingSource1.DataMember = "Usuarios";
+            this.usuariosBindingSource1.DataSource = this.celuCenterDataUsuarios;
             // 
-            // nuevo_btn
+            // usuariosTableAdapter1
             // 
-            this.nuevo_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.nuevo_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nuevo_btn.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
-            this.nuevo_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nuevo_btn.Image = ((System.Drawing.Image)(resources.GetObject("nuevo_btn.Image")));
-            this.nuevo_btn.Location = new System.Drawing.Point(677, 112);
-            this.nuevo_btn.Name = "nuevo_btn";
-            this.nuevo_btn.Size = new System.Drawing.Size(145, 52);
-            this.nuevo_btn.TabIndex = 22;
-            this.nuevo_btn.Text = "   Nuevo";
-            this.nuevo_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.nuevo_btn.UseVisualStyleBackColor = true;
+            this.usuariosTableAdapter1.ClearBeforeFill = true;
+            // 
+            // celuCenterDataUsuariosBindingSource
+            // 
+            this.celuCenterDataUsuariosBindingSource.DataSource = this.celuCenterDataUsuarios;
+            this.celuCenterDataUsuariosBindingSource.Position = 0;
+            // 
+            // celuCenterUsuariosBindingSource
+            // 
+            this.celuCenterUsuariosBindingSource.DataSource = this.celuCenterUsuarios;
+            this.celuCenterUsuariosBindingSource.Position = 0;
             // 
             // GestionarUsuario_form
             // 
@@ -533,6 +511,10 @@ namespace CeluCenter.Vistas
             ((System.ComponentModel.ISupportInitialize)(this.usuarios_tabla)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.celuCenterUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.celuCenterDataUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.celuCenterDataUsuariosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.celuCenterUsuariosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -572,14 +554,13 @@ namespace CeluCenter.Vistas
         private CeluCenterUsuarios celuCenterUsuarios;
         private System.Windows.Forms.BindingSource usuariosBindingSource;
         private CeluCenterUsuariosTableAdapters.UsuariosTableAdapter usuariosTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomUsuarioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn contactoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cIDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn discriminatorDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button eliminar_btn;
         private System.Windows.Forms.Button modificar_btn;
         private System.Windows.Forms.Button nuevo_btn;
+        private CeluCenterDataUsuarios celuCenterDataUsuarios;
+        private System.Windows.Forms.BindingSource usuariosBindingSource1;
+        private CeluCenterDataUsuariosTableAdapters.UsuariosTableAdapter usuariosTableAdapter1;
+        private System.Windows.Forms.BindingSource celuCenterUsuariosBindingSource;
+        private System.Windows.Forms.BindingSource celuCenterDataUsuariosBindingSource;
     }
 }

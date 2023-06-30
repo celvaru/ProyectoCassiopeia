@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CeluCenterProducto" targetNamespace="http://tempuri.org/CeluCenterProducto.xsd" xmlns:mstns="http://tempuri.org/CeluCenterProducto.xsd" xmlns="http://tempuri.org/CeluCenterProducto.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="CeluCenterConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CeluCenterConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CeluCenter.Properties.Settings.GlobalReference.Default.CeluCenterConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProductoesTableAdapter" GeneratorDataComponentClassName="ProductoesTableAdapter" Name="Productoes" UserDataComponentName="ProductoesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CeluCenterConnectionString (Settings)" DbObjectName="CeluCenter.dbo.Productoes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Modelo FROM dbo.Productoes</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Modelo" DataSetColumn="Modelo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CeluCenterProducto" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="CeluCenterProducto" msprop:Generator_DataSetName="CeluCenterProducto">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Productoes" msprop:Generator_RowEvHandlerName="ProductoesRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductoesRowDeleted" msprop:Generator_RowDeletingName="ProductoesRowDeleting" msprop:Generator_RowEvArgName="ProductoesRowChangeEvent" msprop:Generator_TablePropName="Productoes" msprop:Generator_RowChangedName="ProductoesRowChanged" msprop:Generator_RowChangingName="ProductoesRowChanging" msprop:Generator_TableClassName="ProductoesDataTable" msprop:Generator_RowClassName="ProductoesRow" msprop:Generator_TableVarName="tableProductoes" msprop:Generator_UserTableName="Productoes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Modelo" msprop:Generator_ColumnPropNameInRow="Modelo" msprop:Generator_ColumnPropNameInTable="ModeloColumn" msprop:Generator_ColumnVarNameInTable="columnModelo" msprop:Generator_UserColumnName="Modelo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

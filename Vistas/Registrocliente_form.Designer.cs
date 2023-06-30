@@ -29,32 +29,32 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registrocliente_form));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registrocliente_form));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.nombre_txt = new System.Windows.Forms.TextBox();
             this.ci_txt = new System.Windows.Forms.TextBox();
+            this.nombre_txt = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cliente_tabla = new System.Windows.Forms.DataGridView();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ciClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.celuCenterCliente = new CeluCenter.CeluCenterCliente();
             this.cancelar_btn = new System.Windows.Forms.Button();
             this.eliminar_btn = new System.Windows.Forms.Button();
             this.modificar_btn = new System.Windows.Forms.Button();
             this.nuevo_btn = new System.Windows.Forms.Button();
-            this.cliente_tabla = new System.Windows.Forms.DataGridView();
-            this.celuCenterCliente = new CeluCenter.CeluCenterCliente();
-            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clientesTableAdapter = new CeluCenter.CeluCenterClienteTableAdapters.ClientesTableAdapter();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ciClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cliente_tabla)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.celuCenterCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.celuCenterCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -70,15 +70,28 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del cliente";
             // 
-            // label1
+            // ci_txt
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Rockwell", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(99, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(384, 43);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "REGISTRO CLIENTE";
+            this.ci_txt.Location = new System.Drawing.Point(378, 39);
+            this.ci_txt.Name = "ci_txt";
+            this.ci_txt.Size = new System.Drawing.Size(156, 30);
+            this.ci_txt.TabIndex = 2;
+            // 
+            // nombre_txt
+            // 
+            this.nombre_txt.Location = new System.Drawing.Point(116, 39);
+            this.nombre_txt.Name = "nombre_txt";
+            this.nombre_txt.Size = new System.Drawing.Size(199, 30);
+            this.nombre_txt.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(336, 42);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 21);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "CI:";
             // 
             // label2
             // 
@@ -88,6 +101,16 @@
             this.label2.Size = new System.Drawing.Size(88, 21);
             this.label2.TabIndex = 0;
             this.label2.Text = "Nombre:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Rockwell", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(99, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(384, 43);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "REGISTRO CLIENTE";
             // 
             // groupBox2
             // 
@@ -103,28 +126,67 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Lista de clientes";
             // 
-            // label3
+            // cliente_tabla
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(336, 42);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 21);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "CI:";
+            this.cliente_tabla.AllowUserToOrderColumns = true;
+            this.cliente_tabla.AutoGenerateColumns = false;
+            this.cliente_tabla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.cliente_tabla.BackgroundColor = System.Drawing.Color.DarkCyan;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MediumTurquoise;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.cliente_tabla.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.cliente_tabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cliente_tabla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nombreDataGridViewTextBoxColumn,
+            this.ciClienteDataGridViewTextBoxColumn});
+            this.cliente_tabla.DataSource = this.clientesBindingSource;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumTurquoise;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.cliente_tabla.DefaultCellStyle = dataGridViewCellStyle2;
+            this.cliente_tabla.Location = new System.Drawing.Point(26, 43);
+            this.cliente_tabla.Name = "cliente_tabla";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumTurquoise;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.cliente_tabla.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.cliente_tabla.Size = new System.Drawing.Size(346, 194);
+            this.cliente_tabla.TabIndex = 41;
             // 
-            // nombre_txt
+            // nombreDataGridViewTextBoxColumn
             // 
-            this.nombre_txt.Location = new System.Drawing.Point(116, 39);
-            this.nombre_txt.Name = "nombre_txt";
-            this.nombre_txt.Size = new System.Drawing.Size(199, 30);
-            this.nombre_txt.TabIndex = 1;
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
             // 
-            // ci_txt
+            // ciClienteDataGridViewTextBoxColumn
             // 
-            this.ci_txt.Location = new System.Drawing.Point(378, 39);
-            this.ci_txt.Name = "ci_txt";
-            this.ci_txt.Size = new System.Drawing.Size(156, 30);
-            this.ci_txt.TabIndex = 2;
+            this.ciClienteDataGridViewTextBoxColumn.DataPropertyName = "CiCliente";
+            this.ciClienteDataGridViewTextBoxColumn.HeaderText = "CI";
+            this.ciClienteDataGridViewTextBoxColumn.Name = "ciClienteDataGridViewTextBoxColumn";
+            // 
+            // clientesBindingSource
+            // 
+            this.clientesBindingSource.DataMember = "Clientes";
+            this.clientesBindingSource.DataSource = this.celuCenterCliente;
+            // 
+            // celuCenterCliente
+            // 
+            this.celuCenterCliente.DataSetName = "CeluCenterCliente";
+            this.celuCenterCliente.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cancelar_btn
             // 
@@ -182,72 +244,11 @@
             this.nuevo_btn.Text = " Guardar";
             this.nuevo_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.nuevo_btn.UseVisualStyleBackColor = true;
-            // 
-            // cliente_tabla
-            // 
-            this.cliente_tabla.AllowUserToOrderColumns = true;
-            this.cliente_tabla.AutoGenerateColumns = false;
-            this.cliente_tabla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.cliente_tabla.BackgroundColor = System.Drawing.Color.DarkCyan;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MediumTurquoise;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.cliente_tabla.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.cliente_tabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.cliente_tabla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nombreDataGridViewTextBoxColumn,
-            this.ciClienteDataGridViewTextBoxColumn});
-            this.cliente_tabla.DataSource = this.clientesBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumTurquoise;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.cliente_tabla.DefaultCellStyle = dataGridViewCellStyle2;
-            this.cliente_tabla.Location = new System.Drawing.Point(26, 43);
-            this.cliente_tabla.Name = "cliente_tabla";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumTurquoise;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.cliente_tabla.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.cliente_tabla.Size = new System.Drawing.Size(346, 194);
-            this.cliente_tabla.TabIndex = 41;
-            // 
-            // celuCenterCliente
-            // 
-            this.celuCenterCliente.DataSetName = "CeluCenterCliente";
-            this.celuCenterCliente.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clientesBindingSource
-            // 
-            this.clientesBindingSource.DataMember = "Clientes";
-            this.clientesBindingSource.DataSource = this.celuCenterCliente;
+            this.nuevo_btn.Click += new System.EventHandler(this.nuevo_btn_Click);
             // 
             // clientesTableAdapter
             // 
             this.clientesTableAdapter.ClearBeforeFill = true;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            // 
-            // ciClienteDataGridViewTextBoxColumn
-            // 
-            this.ciClienteDataGridViewTextBoxColumn.DataPropertyName = "CiCliente";
-            this.ciClienteDataGridViewTextBoxColumn.HeaderText = "CI";
-            this.ciClienteDataGridViewTextBoxColumn.Name = "ciClienteDataGridViewTextBoxColumn";
             // 
             // Registrocliente_form
             // 
@@ -269,8 +270,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cliente_tabla)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.celuCenterCliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.celuCenterCliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

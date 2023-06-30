@@ -72,6 +72,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CeluCenterDataSetVentas.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CeluCenterDataUsuarios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CeluCenterDataUsuarios.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CeluCenterDetalle1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -81,6 +86,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CeluCenterInventario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CeluCenterProducto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CeluCenterProducto.xsd</DependentUpon>
     </Compile>
     <Compile Include="CeluCenterUsuarios.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -231,6 +241,17 @@
     <None Include="CeluCenterDataSetVentas.xss">
       <DependentUpon>CeluCenterDataSetVentas.xsd</DependentUpon>
     </None>
+    <None Include="CeluCenterDataUsuarios.xsc">
+      <DependentUpon>CeluCenterDataUsuarios.xsd</DependentUpon>
+    </None>
+    <None Include="CeluCenterDataUsuarios.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CeluCenterDataUsuarios.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CeluCenterDataUsuarios.xss">
+      <DependentUpon>CeluCenterDataUsuarios.xsd</DependentUpon>
+    </None>
     <None Include="CeluCenterDetalle1.xsc">
       <DependentUpon>CeluCenterDetalle1.xsd</DependentUpon>
     </None>
@@ -252,6 +273,17 @@
     </None>
     <None Include="CeluCenterInventario.xss">
       <DependentUpon>CeluCenterInventario.xsd</DependentUpon>
+    </None>
+    <None Include="CeluCenterProducto.xsc">
+      <DependentUpon>CeluCenterProducto.xsd</DependentUpon>
+    </None>
+    <None Include="CeluCenterProducto.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CeluCenterProducto.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CeluCenterProducto.xss">
+      <DependentUpon>CeluCenterProducto.xsd</DependentUpon>
     </None>
     <None Include="CeluCenterUsuarios.xsc">
       <DependentUpon>CeluCenterUsuarios.xsd</DependentUpon>

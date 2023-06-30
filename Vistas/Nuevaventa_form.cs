@@ -30,6 +30,8 @@ namespace CeluCenter.Vistas
 
         private void Nuevaventa_form_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'celuCenterProducto.Productoes' Puede moverla o quitarla según sea necesario.
+            this.productoesTableAdapter.Fill(this.celuCenterProducto.Productoes);
             // TODO: esta línea de código carga datos en la tabla 'celuCenterDetalle.Detalle_Venta' Puede moverla o quitarla según sea necesario.
             this.detalle_VentaTableAdapter.Fill(this.celuCenterDetalle.Detalle_Venta);
 

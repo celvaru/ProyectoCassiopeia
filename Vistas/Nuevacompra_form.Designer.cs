@@ -28,32 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Nuevacompra_form));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.fechacompra_date = new System.Windows.Forms.DateTimePicker();
+            this.cantidad_txt = new System.Windows.Forms.TextBox();
+            this.total_txt = new System.Windows.Forms.TextBox();
+            this.ncompra_txt = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.ncompra_txt = new System.Windows.Forms.TextBox();
-            this.total_txt = new System.Windows.Forms.TextBox();
-            this.codigo_txt = new System.Windows.Forms.TextBox();
+            this.producto_combo = new System.Windows.Forms.ComboBox();
             this.cantactual_txt = new System.Windows.Forms.TextBox();
             this.cantstock_txt = new System.Windows.Forms.TextBox();
-            this.cantidad_txt = new System.Windows.Forms.TextBox();
+            this.codigo_txt = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.producto_combo = new System.Windows.Forms.ComboBox();
             this.fecharegistro_date = new System.Windows.Forms.DateTimePicker();
-            this.fechacompra_date = new System.Windows.Forms.DateTimePicker();
             this.cancelar_btn = new System.Windows.Forms.Button();
             this.aceptar_btn = new System.Windows.Forms.Button();
+            this.celuCenterProducto = new CeluCenter.CeluCenterProducto();
+            this.celuCenterProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.celuCenterProducto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.celuCenterProductoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -73,6 +78,79 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la compra";
+            // 
+            // fechacompra_date
+            // 
+            this.fechacompra_date.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.fechacompra_date.CustomFormat = "dd/MM/yyyy";
+            this.fechacompra_date.Enabled = false;
+            this.fechacompra_date.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fechacompra_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.fechacompra_date.Location = new System.Drawing.Point(417, 34);
+            this.fechacompra_date.MaxDate = new System.DateTime(2023, 6, 29, 0, 0, 0, 0);
+            this.fechacompra_date.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.fechacompra_date.Name = "fechacompra_date";
+            this.fechacompra_date.Size = new System.Drawing.Size(123, 30);
+            this.fechacompra_date.TabIndex = 16;
+            this.fechacompra_date.Value = new System.DateTime(2023, 6, 29, 0, 0, 0, 0);
+            // 
+            // cantidad_txt
+            // 
+            this.cantidad_txt.Location = new System.Drawing.Point(417, 80);
+            this.cantidad_txt.Name = "cantidad_txt";
+            this.cantidad_txt.Size = new System.Drawing.Size(123, 30);
+            this.cantidad_txt.TabIndex = 12;
+            // 
+            // total_txt
+            // 
+            this.total_txt.Location = new System.Drawing.Point(142, 80);
+            this.total_txt.Name = "total_txt";
+            this.total_txt.Size = new System.Drawing.Size(123, 30);
+            this.total_txt.TabIndex = 5;
+            // 
+            // ncompra_txt
+            // 
+            this.ncompra_txt.Enabled = false;
+            this.ncompra_txt.Location = new System.Drawing.Point(142, 38);
+            this.ncompra_txt.Name = "ncompra_txt";
+            this.ncompra_txt.Size = new System.Drawing.Size(123, 30);
+            this.ncompra_txt.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(314, 83);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(97, 21);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Cantidad:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(271, 41);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(140, 21);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Fecha compra:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(76, 83);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 21);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Total:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(18, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(127, 21);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nro. compra:";
             // 
             // label2
             // 
@@ -103,100 +181,13 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos del producto";
             // 
-            // label1
+            // producto_combo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nro. compra:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(76, 83);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 21);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Total:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(271, 41);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(140, 21);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Fecha compra:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(314, 83);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 21);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Cantidad:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(45, 45);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 21);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Producto:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(54, 89);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 21);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Código:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(290, 89);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(121, 21);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "Cant. actual:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(296, 45);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(115, 21);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "Cant. stock:";
-            // 
-            // ncompra_txt
-            // 
-            this.ncompra_txt.Enabled = false;
-            this.ncompra_txt.Location = new System.Drawing.Point(142, 38);
-            this.ncompra_txt.Name = "ncompra_txt";
-            this.ncompra_txt.Size = new System.Drawing.Size(123, 30);
-            this.ncompra_txt.TabIndex = 4;
-            // 
-            // total_txt
-            // 
-            this.total_txt.Location = new System.Drawing.Point(142, 80);
-            this.total_txt.Name = "total_txt";
-            this.total_txt.Size = new System.Drawing.Size(123, 30);
-            this.total_txt.TabIndex = 5;
-            // 
-            // codigo_txt
-            // 
-            this.codigo_txt.Enabled = false;
-            this.codigo_txt.Location = new System.Drawing.Point(142, 84);
-            this.codigo_txt.Name = "codigo_txt";
-            this.codigo_txt.Size = new System.Drawing.Size(123, 30);
-            this.codigo_txt.TabIndex = 7;
+            this.producto_combo.FormattingEnabled = true;
+            this.producto_combo.Location = new System.Drawing.Point(142, 42);
+            this.producto_combo.Name = "producto_combo";
+            this.producto_combo.Size = new System.Drawing.Size(121, 29);
+            this.producto_combo.TabIndex = 11;
             // 
             // cantactual_txt
             // 
@@ -214,12 +205,49 @@
             this.cantstock_txt.Size = new System.Drawing.Size(123, 30);
             this.cantstock_txt.TabIndex = 9;
             // 
-            // cantidad_txt
+            // codigo_txt
             // 
-            this.cantidad_txt.Location = new System.Drawing.Point(417, 80);
-            this.cantidad_txt.Name = "cantidad_txt";
-            this.cantidad_txt.Size = new System.Drawing.Size(123, 30);
-            this.cantidad_txt.TabIndex = 12;
+            this.codigo_txt.Enabled = false;
+            this.codigo_txt.Location = new System.Drawing.Point(142, 84);
+            this.codigo_txt.Name = "codigo_txt";
+            this.codigo_txt.Size = new System.Drawing.Size(123, 30);
+            this.codigo_txt.TabIndex = 7;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(296, 45);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(115, 21);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "Cant. stock:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(290, 89);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(121, 21);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Cant. actual:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(54, 89);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(82, 21);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Código:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(45, 45);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(96, 21);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Producto:";
             // 
             // label8
             // 
@@ -230,14 +258,6 @@
             this.label8.Size = new System.Drawing.Size(144, 21);
             this.label8.TabIndex = 13;
             this.label8.Text = "Fecha registro:";
-            // 
-            // producto_combo
-            // 
-            this.producto_combo.FormattingEnabled = true;
-            this.producto_combo.Location = new System.Drawing.Point(142, 42);
-            this.producto_combo.Name = "producto_combo";
-            this.producto_combo.Size = new System.Drawing.Size(121, 29);
-            this.producto_combo.TabIndex = 11;
             // 
             // fecharegistro_date
             // 
@@ -253,21 +273,6 @@
             this.fecharegistro_date.Size = new System.Drawing.Size(123, 30);
             this.fecharegistro_date.TabIndex = 17;
             this.fecharegistro_date.Value = new System.DateTime(2023, 6, 29, 0, 0, 0, 0);
-            // 
-            // fechacompra_date
-            // 
-            this.fechacompra_date.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.fechacompra_date.CustomFormat = "dd/MM/yyyy";
-            this.fechacompra_date.Enabled = false;
-            this.fechacompra_date.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fechacompra_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fechacompra_date.Location = new System.Drawing.Point(417, 34);
-            this.fechacompra_date.MaxDate = new System.DateTime(2023, 6, 29, 0, 0, 0, 0);
-            this.fechacompra_date.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.fechacompra_date.Name = "fechacompra_date";
-            this.fechacompra_date.Size = new System.Drawing.Size(123, 30);
-            this.fechacompra_date.TabIndex = 16;
-            this.fechacompra_date.Value = new System.DateTime(2023, 6, 29, 0, 0, 0, 0);
             // 
             // cancelar_btn
             // 
@@ -300,6 +305,16 @@
             this.aceptar_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.aceptar_btn.UseVisualStyleBackColor = true;
             // 
+            // celuCenterProducto
+            // 
+            this.celuCenterProducto.DataSetName = "CeluCenterProducto";
+            this.celuCenterProducto.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // celuCenterProductoBindingSource
+            // 
+            this.celuCenterProductoBindingSource.DataSource = this.celuCenterProducto;
+            this.celuCenterProductoBindingSource.Position = 0;
+            // 
             // Nuevacompra_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -322,6 +337,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.celuCenterProducto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.celuCenterProductoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,5 +369,7 @@
         private System.Windows.Forms.ComboBox producto_combo;
         private System.Windows.Forms.DateTimePicker fechacompra_date;
         private System.Windows.Forms.DateTimePicker fecharegistro_date;
+        private System.Windows.Forms.BindingSource celuCenterProductoBindingSource;
+        private CeluCenterProducto celuCenterProducto;
     }
 }
